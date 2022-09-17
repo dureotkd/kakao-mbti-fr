@@ -1,7 +1,11 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import { ProgressBar, Question, Answer } from "../components";
 
 function Onboarding2() {
+  const { state } = useLocation();
+  console.log(state.name);
+
   return (
     <div className="main-app">
       <ProgressBar step={2} />
