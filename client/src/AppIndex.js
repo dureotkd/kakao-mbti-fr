@@ -9,6 +9,7 @@ import {
   Onboarding3,
   Onboarding4,
   Onboarding5,
+  Result,
 } from "./pages";
 
 /**
@@ -27,6 +28,7 @@ function AppIndex() {
       <Route exact path="/on3" element={<Onboarding3 />} />
       <Route exact path="/on4" element={<Onboarding4 />} />
       <Route exact path="/on5" element={<Onboarding5 />} />
+      <Route exact path="/result" element={<Result />} />
     </Routes>
   );
 }

@@ -5,9 +5,9 @@ function Onboarding3() {
   return (
     <div className="main-app">
       <ProgressBar step={3} />
-      <Question imageUrl="https://kakaofriendsmbti.netlify.app/images/01-01.png" />
-      <Answer text="당연하지! 어디서 할지 고민 중이야!" />
-      <Answer text="그냥 맛있는거 먹으러 갈까 생각 중이야!" />
+      <Question imageUrl="https://kakaofriendsmbti.netlify.app/images/03-01.png" />
+      <Answer text="무슨 꽃 샀어? 향은 좋아?" value="T" />
+      <Answer text="왜 우울해? 무슨 일 있어?" value="F" />
     </div>
   );
 }
