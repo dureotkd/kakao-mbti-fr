@@ -19,7 +19,7 @@ function App() {
   });
   const [mbti, setMbti] = React.useState([
     {
-      I: 0, // 내향형
+      I: 0, // 내향형 !!
       E: 0, // 외향형
     },
     {
