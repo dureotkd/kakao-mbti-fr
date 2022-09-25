@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
+import axios from "axios";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./App.css";
 import AppIndex from "./AppIndex";
+import { parseStr } from "./helper/common-helper";
 
 export const StoreContext = React.createContext({});
 
@@ -11,6 +13,32 @@ export const StoreContext = React.createContext({});
  * React Context
  */
 function App() {
+  const testApi = async () => {
+    const url = "https://apis.data.go.kr/6300000/pis/parkinglotIF";
+    const serviceKey =
+      "9OMBr6YC9+IDhAQTbaj88qvrTay3yXUzW7oU1u3yjSoAGIme26GBP8DK4f3rlgDO2m8OmKe+dArxdCYh4lZGQg==";
+
+    await axios({
+      url: url,
+      method: "get",
+      params: {
+        serviceKey: serviceKey,
+        numOfRows: 50,
+        pageNo: 1,
+      },
+    })
+      .then((response) => {
+        const jsonData = parseStr(response.data);
+      })
+      .catch(() => {
+        console.log("에러 !");
+      });
+  };
+
+  React.useEffect(() => {
+    testApi();
+  }, []);
+
   const navigation = useNavigate();
 
   const [dispatchType, setDispatchType] = React.useState({

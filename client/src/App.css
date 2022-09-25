@@ -60,3 +60,17 @@ body {
   height: 30px;
   border-radius: 10px;
 }
+
+.result-img {
+  width: 390px;
+  height: 525px;
+  margin: 30px;
+}
+
+.result-img-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
